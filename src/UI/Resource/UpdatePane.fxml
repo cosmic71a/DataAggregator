@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.UpdateController">
+   <children>
+      <VBox prefHeight="640.0" prefWidth="824.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" focusTraversable="false" prefHeight="100.0" prefWidth="824.0" style="-fx-background-color: FFA62F;" text="DATA UPDATE" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" focusTraversable="false" prefHeight="100.0" prefWidth="824.0" text="Fetching the resource from the web and store in our Json file. You can update data to our program process." />
+            <HBox prefHeight="340.0" prefWidth="824.0">
+               <children>
+                  <ScrollPane focusTraversable="false" prefHeight="200.0" prefWidth="612.0">
+                     <content>
+                        <VBox prefHeight="291.0" prefWidth="610.0" spacing="30.0">
+                           <children>
+                              <Label alignment="CENTER" focusTraversable="false" prefWidth="612.0" style="-fx-background-color: #FFDA78;" text="List of website">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <CheckBox fx:id="buttonAll" focusTraversable="false" mnemonicParsing="false" onAction="#chooseAll" prefHeight="17.0" prefWidth="200.0" text="Choose all">
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="button1" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeButtonAll" prefHeight="17.0" prefWidth="200.0" text="BeInCrypto">
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="button2" focusTraversable="false" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#removeButtonAll" prefWidth="200.0" text="COINDESK">
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="button3" focusTraversable="false" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#removeButtonAll" prefWidth="200.0" text="FREIGHTWAVES">
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="button4" focusTraversable="false" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#removeButtonAll" prefWidth="200.0" text="UTODAY">
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="button5" focusTraversable="false" layoutX="80.0" layoutY="245.0" mnemonicParsing="false" onAction="#removeButtonAll" prefWidth="200.0" text="BLOCKCHAINNEWS">
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <VBox prefHeight="200.0" prefWidth="212.0" spacing="80.0">
+                     <children>
+                        <Button fx:id="buttonFetch" focusTraversable="false" mnemonicParsing="false" onAction="#askFetch" prefWidth="150.0" text="Fetch resource">
+                           <VBox.margin>
+                              <Insets left="35.0" top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="buttonUpload" focusTraversable="false" mnemonicParsing="false" onAction="#askUpload" prefWidth="150.0" text="Upload from the storage">
+                           <VBox.margin>
+                              <Insets left="35.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="buttonBothFU" focusTraversable="false" mnemonicParsing="false" onAction="#askBothFU" prefWidth="150.0" text="Fetch &amp; Upload">
+                           <VBox.margin>
+                              <Insets left="35.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

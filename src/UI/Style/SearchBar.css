@@ -1,0 +1,7 @@
+.transparent {
+	-fx-background-color: rgba(0,0,0,0);
+}
+.round-layout {
+	-fx-border-radius: 58;
+	-fx-border-color: #070707;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="824.0" style="-fx-background-color: E9E9E9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.BlogViewController">
+   <children>
+      <TextField fx:id="urlText" editable="false" layoutX="236.0" layoutY="3.0" prefHeight="25.0" prefWidth="382.0" text="url" AnchorPane.topAnchor="3.0" />
+      <Label layoutX="188.0" layoutY="7.0" prefHeight="25.0" prefWidth="40.0" text="Source:" AnchorPane.leftAnchor="188.0" AnchorPane.topAnchor="3.0" />
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <content>
+            <VBox prefWidth="100.0">
+               <children>
+                  <Label fx:id="titleLabel" minHeight="-Infinity" minWidth="-Infinity" prefWidth="815.0" text="Tittle" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="authorTime" minWidth="-Infinity" text="Author and Time">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="contentLabel" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefWidth="815.0" text="Content" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <FlowPane fx:id="keywordSpace" maxWidth="824.0" prefWidth="824.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="Keywords: " />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
